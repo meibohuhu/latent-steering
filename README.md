@@ -55,9 +55,9 @@ The CFG-Ctrl paper's control-theoretic perspective provides principled solutions
 
 Combining proportional steering, derivative stabilization, and safety constraints:
 
-$$
+
 z' = z + \alpha \delta_t + \beta(\delta_t - \delta_{t-1}) - k \tanh(S(z)) \tag{Eq. 11}
-$$
+
 
 where:
 - $z$: conditional driving features (LLM hidden state for driving adaptor tokens)

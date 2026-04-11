@@ -67,9 +67,7 @@ where:
 - $k$: SMC switching gain
 - $S(z)$: sliding mode surface. In discrete agent steps we use $S_t$  Let $e_t = \alpha\delta_t + \beta(\delta_t-\delta_{t-1})$ (PD correction before SMC). Then
   $$
-  S_t = (e_t - e_{t-1}) + \lambda\, e_t
-  $$
-  The $z$ in $S(z)$ is shorthand for “at the current latent steering step”; it is the same $S_t$ as in `driving_pdsmc.py`. Alternative surfaces (norm / action-space) are listed in §3.3.
+  S_t = (e_t - e_{t-1}) 
 - $\tanh$: smooth approximation of $\text{sign}$ (avoids chattering in discrete 20 FPS system)
 
 ### 2.2 Component Analysis

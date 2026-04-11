@@ -65,7 +65,7 @@ where:
 - $\alpha$: proportional gain (replaces $\gamma$)
 - $\beta$: derivative gain
 - $k$: SMC switching gain
-- $S(z)$: same as step-$t$ surface $S_t = (e_t - e_{t-1}) + \lambda e_t$, with $e_t = \alpha\delta_t + \beta(\delta_t - \delta_{t-1})$ and $\lambda =$ `lambda_smc` (§3.3)
+- $S(z)$: same as step-$t$ surface $S_t = (e_t - e_{t-1}) + \lambda e_t$, with $e_t = \alpha\delta_t + \beta(\delta_t - \delta_{t-1})$ and $\lambda =$ `lambda_smc` 
 - $\tanh$: smooth approximation of $\text{sign}$ (avoids chattering in discrete 20 FPS system)
 
 ### 2.2 Component Analysis

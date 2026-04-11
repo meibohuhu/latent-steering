@@ -65,10 +65,18 @@ where:
 - $\alpha$: proportional gain (replaces $\gamma$)
 - $\beta$: derivative gain
 - $k$: SMC switching gain
-- $S(z)$: sliding mode surface. In discrete agent steps we use $S_t$  Let $e_t = \alpha\delta_t + \beta(\delta_t-\delta_{t-1})$ (PD correction before SMC). Then
-  
-  $S_t$ = ($e_t$ - $e_{t-1}$) 
+- $S(z)$: sliding-mode argument of $\tanh$; discrete form $S_t$, defined in the block below (Design 1, §3.3)
 - $\tanh$: smooth approximation of $\text{sign}$ (avoids chattering in discrete 20 FPS system)
+
+**Sliding surface.** Let $e_t$ be the PD correction *before* SMC:
+$$
+e_t = \alpha\,\delta_t + \beta\bigl(\delta_t - \delta_{t-1}\bigr).
+$$
+At agent step $t$,
+$$
+S_t = \bigl(e_t - e_{t-1}\bigr) + \lambda\, e_t,
+$$
+with $\lambda \geq 0$ (`lambda_smc`). The target formula uses $S(z)$ as shorthand for this $S_t$ in the same update $z \mapsto z'$ (see `simlingo_training/models/driving_pdsmc.py`). Other $S$ designs appear in §3.3.
 
 ### 2.2 Component Analysis
 

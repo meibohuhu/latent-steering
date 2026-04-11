@@ -65,7 +65,7 @@ where:
 - $\alpha$: proportional gain (replaces $\gamma$)
 - $\beta$: derivative gain
 - $k$: SMC switching gain
-- $S(z)$: sliding mode surface. In discrete agent steps we use $S_t$ (**Design 1 — error dynamics**, §3.3). Let $e_t = \alpha\delta_t + \beta(\delta_t-\delta_{t-1})$ (PD correction before SMC). Then
+- $S(z)$: sliding mode surface. In discrete agent steps we use $S_t$  Let $e_t = \alpha\delta_t + \beta(\delta_t-\delta_{t-1})$ (PD correction before SMC). Then
   $$
   S_t = (e_t - e_{t-1}) + \lambda\, e_t
   $$

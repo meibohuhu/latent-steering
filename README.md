@@ -66,8 +66,8 @@ where:
 - $\beta$: derivative gain
 - $k$: SMC switching gain
 - $S(z)$: sliding mode surface. In discrete agent steps we use $S_t$  Let $e_t = \alpha\delta_t + \beta(\delta_t-\delta_{t-1})$ (PD correction before SMC). Then
-  $$
-  $S_t$ = (e_t - e_{t-1}) 
+  $
+  $S_t$ = (e_t - e_{t-1}) $
 - $\tanh$: smooth approximation of $\text{sign}$ (avoids chattering in discrete 20 FPS system)
 
 ### 2.2 Component Analysis
